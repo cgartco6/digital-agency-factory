@@ -1,0 +1,14 @@
+# 1. Install
+pip install -r requirements.txt
+
+# 2. Enforce the master lockdown gate (runs all 4 modules + coverage check)
+python lockdown_check.py
+# expected: ✅ ALL MODULES LOCKED — 100% TEST PASS, COVERAGE GATE SATISFIED
+#           🚀 READY FOR LIVE DEPLOYMENT
+
+# 3. Launch command center + API (two terminals)
+streamlit run command_center/app.py    # → http://localhost:8501
+uvicorn gateway:app --reload --port 8000   # → http://localhost:8000/docs
+
+# 4. (Optional) Trigger the swarm from the API
+curl -X POST http://localhost:8000/orchestrator/run
