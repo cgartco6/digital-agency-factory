@@ -1,0 +1,7 @@
+command_center/
+lockdown_check.py
+studios/*/tests/
+conftest.py
+pytest.ini
+.factory/
+generated_workspace/
