@@ -1,0 +1,11 @@
+{
+  "services": {
+    "api": {
+      "root": ".",
+      "entrypoint": "gateway:app"
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": { "service": "api" } }
+  ]
+}
