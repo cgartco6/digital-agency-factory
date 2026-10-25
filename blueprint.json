@@ -1,0 +1,10 @@
+{
+  "project": "Digital Agency Factory",
+  "version": "1.0.0",
+  "modules": [
+    { "module_id": "branding",  "path": "studios/branding",  "test_path": "studios/branding/tests" },
+    { "module_id": "design",    "path": "studios/design",    "test_path": "studios/design/tests" },
+    { "module_id": "marketing", "path": "studios/marketing", "test_path": "studios/marketing/tests" },
+    { "module_id": "core_mesh", "path": "studios/core_mesh", "test_path": "studios/core_mesh/tests" }
+  ]
+}
