@@ -165,3 +165,18 @@ def main() -> None:
             "All AI calls route to cloud APIs (OpenAI / Anthropic / Replicate). "
             "The host machine never loads a local GPU model."
         )
+
+    snapshot = orchestrator.status_snapshot()
+    _render_matrix(snapshot)
+    st.markdown("---")
+    _render_certification(snapshot)
+    st.markdown("---")
+    _render_log(snapshot)
+
+    if auto:
+        time.sleep(float(AUTO_REFRESH))
+        st.rerun()
+
+
+if __name__ == "__main__":
+    main()
